@@ -71,14 +71,29 @@ TEMPLATES = [
     },
 ]
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
+AUTHENTICATION_BACKENDS = (
     'social_core.backends.vk.VKOAuth2',
-]
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+#     'social_core.backends.vk.VKOAuth2',
+#     'social_core.backends.open_id.OpenIdAuth',
+#     'social_core.backends.google.GoogleOpenId',
+#     'social_core.backends.google.GoogleOAuth2',
+#     'social_core.backends.google.GoogleOAuth',
+#     'social_core.backends.twitter.TwitterOAuth',
+#     'social_core.backends.yahoo.YahooOpenId',
+#     'social_core.backends.github.GithubOAuth2',
+# ]
 
 SOCIAL_AUTH_VK_OAUTH2_KEY = '51705845'
 SOCIAL_AUTH_VK_OAUTH2_SECRET = '97FNRiLdPCbCF9yvNda2'
 SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['offline', 'email', 'friends']
+
+SOCIAL_AUTH_GITHUB_KEY = '925ae94098134ed3e7d6'
+SOCIAL_AUTH_GITHUB_SECRET = '95c07ab65ae54a7ccf73e1304e362aee31af8810'
 
 WSGI_APPLICATION = 'OAuth_proj.wsgi.application'
 
