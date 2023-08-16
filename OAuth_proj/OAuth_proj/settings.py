@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-q(46*4apjgjbm@inz($3gg^s+p(nl)(3vz3f@8zqym_&x@$=^n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -75,6 +75,7 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.vk.VKOAuth2',
     'social_core.backends.github.GithubOAuth2',
     'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.yandex.YandexOAuth2',
 )
 # AUTHENTICATION_BACKENDS = [
 #     'django.contrib.auth.backends.ModelBackend',
@@ -94,6 +95,11 @@ SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['offline', 'email', 'friends']
 
 SOCIAL_AUTH_GITHUB_KEY = '925ae94098134ed3e7d6'
 SOCIAL_AUTH_GITHUB_SECRET = '95c07ab65ae54a7ccf73e1304e362aee31af8810'
+
+SOCIAL_AUTH_YANDEX_OAUTH2_KEY = 'aaa7ce965e574cf0b9e1b27d89e9990b'
+SOCIAL_AUTH_YANDEX_OAUTH2_SECRET = 'c503e562a9a74f97aeec1c47321c4102'
+
+LOGIN_REDIRECT_URL = 'profile'
 
 WSGI_APPLICATION = 'OAuth_proj.wsgi.application'
 
