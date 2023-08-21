@@ -20,7 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('oauth/', include('oauth_app.urls')),
-    path('', include('social_django.urls', namespace='social'))
+    path('social_auth/', include('social_django.urls', namespace='social'))
 ]
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'

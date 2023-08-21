@@ -76,6 +76,7 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
     'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.yandex.YandexOAuth2',
+    'social_core.backends.mailru.MRGOAuth2',
 )
 # AUTHENTICATION_BACKENDS = [
 #     'django.contrib.auth.backends.ModelBackend',
@@ -98,6 +99,9 @@ SOCIAL_AUTH_GITHUB_SECRET = '95c07ab65ae54a7ccf73e1304e362aee31af8810'
 
 SOCIAL_AUTH_YANDEX_OAUTH2_KEY = 'aaa7ce965e574cf0b9e1b27d89e9990b'
 SOCIAL_AUTH_YANDEX_OAUTH2_SECRET = 'c503e562a9a74f97aeec1c47321c4102'
+
+# SOCIAL_AUTH_MAILRU_KEY = '0d3dbb3d30dd4608a9193e2f4960e42f'
+# SOCIAL_AUTH_MAILRU_SECRET = '85cee1541c0343fc81c440700109da99'
 
 LOGIN_REDIRECT_URL = 'profile'
 
